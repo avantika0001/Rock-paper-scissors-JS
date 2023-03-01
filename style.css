@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  background: #2d2a3d;
+  color: #fff;
+  font-family: "Poppins";
+}
+
+.message{
+  margin: 5em 0 2em;
+  text-align: center;
+}
+
+.images{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height:200px;
+/* as all the images are of different height so to prevent them from changing the container height we give a static height */
+/*   text-align: center; */
+}
+
+.computer img, .player img{
+  width:75%;
+}
+
+
+.points{
+  margin:2em 0;
+  text-align: center;
+}
+.computerPoints{
+  margin-left: 3em;
+}
+.playerPoints{
+  margin-right: 3em;
+}
+
+
+.options{
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.options button{
+  background: none;
+  color:#fff;
+  border:2px solid #fff;
+  padding: 1em 2em;
+  border-radius:7px;
+/*   static width so they all look alike */
+  width:150px;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all linear;
+  
+}
+
+.options button:hover{
+  background-color: darkcyan;
+  border:2px solid darkcyan;
+}
+
+.shakeComputer {
+  animation: shakeComputer 0.8s linear;
+}
+.shakePlayer {
+  animation: shakePlayer 0.8s linear;
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes shakePlayer {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
